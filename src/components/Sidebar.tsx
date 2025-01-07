@@ -1,6 +1,5 @@
-// import React from 'react';
-// import { ReactDOM } from 'react';
 
+import {PencilLine} from '@phosphor-icons/react';
 import styles from './Sidebar.module.css';
 export function Sidebar(){
     return (
@@ -15,6 +14,7 @@ export function Sidebar(){
             </div>
             <footer>
                 <a href="#">
+                    <PencilLine size={20}/>
                     Editar seu perfil
                 </a>
             </footer>
