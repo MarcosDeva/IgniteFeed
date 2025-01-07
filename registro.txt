@@ -10,3 +10,5 @@ vite.config.ts
     server: {
         port: 3001,
     }
+
+    npm i @phosphor-icons/react
