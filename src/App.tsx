@@ -13,7 +13,6 @@ export function App() {
       <div className={styles.wrapper}>
         <Sidebar />
         <main>
-      
           <Post />
         </main>
       </div>
