@@ -8,7 +8,7 @@ export function Sidebar(){
                  src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=500" alt="text" 
             />
             <div className={styles.profile}>
-                <Avatar />
+                <Avatar hasBorder src="https://github.com/MarcosDeva.png"/>
                 <strong> Marcos Oliveira</strong>
                 <span> Web Developer</span>
             </div>
