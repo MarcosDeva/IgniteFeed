@@ -1,4 +1,5 @@
 import { Avatar } from './Avatar';
+import { Comment } from './Comment';
 import styles from './Post.module.css';
 
 export function Post(){
@@ -38,10 +39,17 @@ export function Post(){
                 <textarea 
                     placeholder="Escreva um comentário..."
                 />
-                <footer>
+                <footer className={styles.submitComment}>
                     <button type="submit">Publicar</button>
                 </footer>
+
+                <div className={styles.commentList}>
+                    <Comment />
+                    <Comment />
+                    <Comment />
               
+                </div>
+                
             </form>
 
             
