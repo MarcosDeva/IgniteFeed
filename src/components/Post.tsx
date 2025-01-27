@@ -6,7 +6,7 @@ import styles from './Post.module.css';
 import { useState } from 'react';
 
 
-export function Post({ author, publishedAt, content}){
+export function Post({ author, publishedAt, content }){
 
     const [comments, setComments] = useState([]);
     const [newCommentText, setNewCommentText] = useState('');
@@ -21,7 +21,7 @@ export function Post({ author, publishedAt, content}){
     })
 
     function handleCreateNewComment(){
-        event?.preventDefault();
+        event.preventDefault();
 
         setComments([...comments, newCommentText]);
         setNewCommentText('');

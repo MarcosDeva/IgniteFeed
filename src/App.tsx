@@ -18,9 +18,9 @@ const posts = [
       role: 'CTO @Startups',
     },
     content: [
-      { id: 0, type: 'paragraph', content: 'Fala galeraa 👋 '},
-      { id: 1, type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      { id: 2, type: 'link', content: 'MarcosDeva/doctorcare'}
+      { type: 'paragraph', content: 'Fala galeraa 👋 '},
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+      { type: 'link', content: 'MarcosDeva/doctorcare'}
     ],
 
     publishedAt: new Date('2025-01-15 20:00:00')
@@ -34,9 +34,9 @@ const posts = [
       role: 'Dev @Startups',
     },
     content: [
-      { id: 0, type: 'paragraph', content: 'Fala galeraa 👋 '},
-      { id: 1, type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      { id: 2, type: 'link', content: 'RenatoDev23/doctorcare'}
+      { type: 'paragraph', content: 'Fala galeraa 👋 '},
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+      { type: 'link', content: 'RenatoDev23/doctorcare'}
     ],
 
     publishedAt: new Date('2025-01-16 20:00:00'),
@@ -50,9 +50,9 @@ const posts = [
       role: 'Dev @Startups',
     },
     content: [
-      { id: 0,type: 'paragraph', content: 'Fala galeraa 👋 '},
-      { id: 1,type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      { id: 2,type: 'link', content: 'gatitta42/doctorcare'}
+      { type: 'paragraph', content: 'Fala galeraa 👋 '},
+      { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
+      { type: 'link', content: 'gatitta42/doctorcare'}
     ],
 
     publishedAt: new Date('2025-01-17 20:00:00'),
