@@ -6,7 +6,7 @@ import styles from './Post.module.css';
 import { useState } from 'react';
 
 
-export function Post({ author, publishedAt, content }){
+export function Post({ author, publishedAt, content, id }){
 
     const [comments, setComments] = useState([]);
     const [newCommentText, setNewCommentText] = useState('');
@@ -52,9 +52,9 @@ export function Post({ author, publishedAt, content }){
             <div className={styles.content}>
                {content.map(line => {
                 if(line.type == 'paragraph'){
-                    return <p>{line.content}</p>;
+                    return <p key={line.id}>{line.content}</p>;
                 }else if(line.type == 'link'){
-                    return <p><a href="#">{line.content}</a></p>
+                    return <p key={line.id}><a href="#">{line.content}</a></p>
                 }
                })}
             </div>
