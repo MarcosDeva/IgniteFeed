@@ -5,6 +5,7 @@ import { Avatar } from './Avatar';
 import styles from './Comment.module.css';
 
 export function Comment({content}){
+
     return(
         <div className={styles.comment}>
             <Avatar src=""/>
