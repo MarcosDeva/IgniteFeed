@@ -1,15 +1,16 @@
+import { useState } from 'react';
 import { format, formatDistanceToNow } from 'date-fns';
 import { ptBR } from 'date-fns/locale/pt-BR';
 import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 import styles from './Post.module.css';
-import { useState } from 'react';
-
 
 export function Post({ author, publishedAt, content }){
 
     const [comments, setComments] = useState([]);
+
     const [newCommentText, setNewCommentText] = useState('');
+
     const publisedDateFormatted = format(
         publishedAt, "d 'de' LLLL 'às' HH:mm'h'",
         { locale: ptBR} 
@@ -28,6 +29,7 @@ export function Post({ author, publishedAt, content }){
     }
 
     function handleNewCommentChange(){
+        event.target.setCustomValidity('');
         setNewCommentText(event.target.value);
     }
 
@@ -38,6 +40,13 @@ export function Post({ author, publishedAt, content }){
 
         setComments(commentsWithoutDeletedOne);
     }
+
+    function hadleNewCommentInvalid(){
+        event.target.setCustomValidity('Esse campo é obrigatório');
+    }
+
+    const isNewCommentEmpty = newCommentText.length == 0 ;
+
     return(
         <article className={styles.post}>
             <header>
@@ -74,9 +83,17 @@ export function Post({ author, publishedAt, content }){
                     placeholder="Escreva um comentário..."
                     value={newCommentText}
                     onChange={handleNewCommentChange}
+                    onInvalid={hadleNewCommentInvalid}
+                    required
                 />
                 <footer className={styles.submitComment} >
-                    <button type="submit">Publicar</button>
+                    <button 
+                        className={styles.buttonPost}
+                        type="submit" 
+                        disabled={isNewCommentEmpty}
+                    >
+                            Publicar
+                    </button>
                 </footer>
 
                 <div className={styles.commentList}>
