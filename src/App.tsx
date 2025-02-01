@@ -45,14 +45,14 @@ const posts = [
   {
     id: 3,
     author: {
-      avatarUrl: 'https://github.com/gatitta42.png',
-      name: 'Anna',
+      avatarUrl: 'https://github.com/Gus-pixel.png',
+      name: 'Gus',
       role: 'Dev @Startups',
     },
     content: [
       { type: 'paragraph', content: 'Fala galeraa 👋 '},
       { type: 'paragraph', content: 'Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀'},
-      { type: 'link', content: 'gatitta42/doctorcare'}
+      { type: 'link', content: 'gus-pixel/doctorcare'}
     ],
 
     publishedAt: new Date('2025-01-17 20:00:00'),
