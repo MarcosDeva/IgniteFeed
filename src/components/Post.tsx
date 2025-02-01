@@ -33,6 +33,10 @@ export function Post({ author, publishedAt, content }){
         setNewCommentText(event.target.value);
     }
 
+    function hadleNewCommentInvalid(){
+        event.target.setCustomValidity('Esse campo é obrigatório');
+    }
+
     function deleteComment(commentToDelet){
         const commentsWithoutDeletedOne = comments.filter( comment => {
             return comment != commentToDelet;
@@ -41,11 +45,9 @@ export function Post({ author, publishedAt, content }){
         setComments(commentsWithoutDeletedOne);
     }
 
-    function hadleNewCommentInvalid(){
-        event.target.setCustomValidity('Esse campo é obrigatório');
-    }
+   
 
-    const isNewCommentEmpty = newCommentText.length == 0 ;
+    const isNewCommentEmpty = newCommentText.length === 0 ;
 
     return(
         <article className={styles.post}>
@@ -95,8 +97,9 @@ export function Post({ author, publishedAt, content }){
                             Publicar
                     </button>
                 </footer>
+            </form>
 
-                <div className={styles.commentList}>
+            <div className={styles.commentList}>
                   {comments.map(comment => {
                     return <Comment
                                 key={comment}
@@ -104,9 +107,7 @@ export function Post({ author, publishedAt, content }){
                                 onDeleteComment={deleteComment}
                             />
                   })}
-                </div>
-                
-            </form>
+            </div>
 
             
         </article>
